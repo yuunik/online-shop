@@ -16,9 +16,13 @@
     ]
   },
   "vueCompilerOptions": {
-    // experimentalRuntimeMode 已废弃，现调整为 nativeTags，请升级 Volar 插件至最新版本
-    // "nativeTags": ["block", "component", "template", "slot"]
-    // 调整 Volar（Vue 语言服务工具）解析行为，用于为 uni-app 组件提供 TypeScript 类型
+    // Vue-Official  v1.x 配置写法(已废弃)
+    // "experimentalRuntimeMode": "runtime-uni-app",
+
+    // Vue-Official  v2.0.12 配置写法
+    "nativeTags": ["block", "component", "template", "slot"],
+
+    // Vue-Official  v2.0.14+ 配置写法(最新写法)
     "plugins": ["@uni-helper/uni-app-types/volar-plugin"]
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
