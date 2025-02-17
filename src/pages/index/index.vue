@@ -1,16 +1,9 @@
 <script setup lang="ts">
-//
-const change = () => {}
+import CustomNavBar from '@/components/CustomNavBar/index.vue'
 </script>
 
 <template>
-  <uni-calendar
-    :insert="true"
-    :lunar="true"
-    :start-date="'2019-3-2'"
-    :end-date="'2019-5-20'"
-    @change="change"
-  />
+  <CustomNavBar />
 </template>
 
 <style lang="scss">
