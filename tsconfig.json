@@ -20,7 +20,7 @@
     // "experimentalRuntimeMode": "runtime-uni-app",
 
     // Vue-Official  v2.0.12 配置写法
-    // "nativeTags": ["block", "component", "template", "slot"],
+    "nativeTags": ["block", "component", "template", "slot"],
 
     // Vue-Official  v2.0.14+ 配置写法(最新写法)
     "plugins": ["@uni-helper/uni-app-types/volar-plugin"]
