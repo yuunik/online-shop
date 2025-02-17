@@ -1,5 +1,6 @@
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
+import type { PersistedStateOptions } from 'pinia-plugin-persistedstate'
 
 // 定义 Store
 export const useMemberStore = defineStore(
@@ -25,8 +26,16 @@ export const useMemberStore = defineStore(
       clearProfile,
     }
   },
-  // TODO: 持久化
   {
-    persist: true,
+    persist: <PersistedStateOptions>{
+      storage: {
+        setItem(key, value) {
+          uni.setStorageSync(key, value)
+        },
+        getItem(key) {
+          uni.getStorageSync(key)
+        },
+      },
+    },
   },
 )
